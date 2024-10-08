@@ -2,7 +2,7 @@ package app;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
         // Отримуємо вхідні дані
         String[] data = getData();
         // Формуємо об'єкт з вхідних даних
@@ -16,9 +16,9 @@ public class Main {
         CalcCostDelivery costDelivery = new CalcCostDelivery();
         double deliveryCost = costDelivery.calcCost(product);
         // Формуємо виведення
-        String baseOutput = product + "\nCost is " +
+        String baseOutput = product.toString() + "\nCost is " +
                 Constants.CURRENCY + " " + baseCost + ".";
-        String deliveryOutput = product + "\nCost is " +
+        String deliveryOutput = product.toString() + "\nCost is " +
                 Constants.CURRENCY + " " + deliveryCost + ".";
         // Виводимо результат
         getOutput(baseOutput);
